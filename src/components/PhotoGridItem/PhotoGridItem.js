@@ -50,10 +50,8 @@ const Image = styled.img`
 `;
 
 const Tags = styled.ul`
-  display: flex;
-  flex-wrap: no-wrap;
-  gap: 8px;
   overflow: hidden;
+  padding: 4px 0;
   text-overflow: ellipsis;
   white-space: nowrap;
 `;
@@ -61,10 +59,14 @@ const Tags = styled.ul`
 const Tag = styled.li`
   background: var(--color-gray-300);
   color: var(--color-gray-800);
+  display: inline;
   font-size: 0.875rem;
   font-weight: 475;
-  padding: 4px 8px;
-  /* text-overflow: ellipsis; */
+  padding: 8px 8px;
+
+  &:not(:last-of-type) {
+    margin-right: 8px;
+  }
 `;
 
 export default PhotoGridItem;
